@@ -4,6 +4,7 @@ import Footer from "@/components/layout/Footer";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import Button from "@/components/ui/Button";
 import GHLForm from "@/components/ui/GHLForm";
+import ClientFAQ from "@/components/ui/ClientFAQ";
 
 export const metadata: Metadata = {
   title: "For Partners | Launch & Manage Community Tribes | Tribes™",
@@ -71,7 +72,7 @@ const successStories = [
     stats: [
       { value: "23", label: "Meal Trains" },
       { value: "15", label: "Rides Coordinated" },
-      { value: "12", label: "Home Repairs" },
+      { value: "8", label: "Home Repairs" },
     ],
     quote:
       '"We created a Parish Care Tribe to coordinate support for members in need. Our members are building genuine relationships through service, not just seeing each other on Sundays." \u2014 Pastor Michael T., Grace Community Church',
@@ -80,8 +81,8 @@ const successStories = [
     icon: "📱",
     title: "Affiliate Example",
     stats: [
-      { value: "180", label: "Users Recruited" },
-      { value: "45", label: "Service Providers" },
+      { value: "200+", label: "Users Recruited" },
+      { value: "15", label: "Service Providers" },
       { value: "5K", label: "Followers Reached" },
     ],
     quote:
@@ -166,7 +167,7 @@ export default function PartnersPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {partnerTypes.map((type, i) => (
                 <ScrollReveal key={type.title} delay={i * 0.1} className="h-full">
-                  <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-8 h-full">
+                  <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-8 h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
                     <h3 className="font-heading text-xl font-semibold text-firefly mb-1">
                       {type.title}
                     </h3>
@@ -182,24 +183,24 @@ export default function PartnersPage() {
         </section>
 
         {/* Case Studies */}
-        <section className="py-16 md:py-24 bg-gray-50">
+        <section className="py-16 md:py-24 bg-granny">
           <div className="max-w-[1200px] mx-auto px-4">
             <ScrollReveal>
-              <h2 className="font-heading text-2xl md:text-[1.7rem] font-bold text-firefly text-center mb-12">
+              <h2 className="font-heading text-2xl md:text-[1.7rem] font-bold text-white text-center mb-12">
                 How Communities Are Using Tribes
               </h2>
             </ScrollReveal>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {caseStudies.map((study, i) => (
                 <ScrollReveal key={study.title} delay={i * 0.1} className="h-full">
-                  <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-8 h-full">
+                  <div className="bg-white border-2 border-firefly rounded-xl p-8 h-full transition-all duration-300 hover:bg-firefly hover:-translate-y-1 hover:shadow-lg hover:shadow-firefly/25 group">
                     <div className="flex items-center gap-3 mb-4">
-                      <span className="text-3xl">{study.icon}</span>
-                      <h3 className="font-heading text-lg font-semibold text-firefly">
+                      <span className="text-3xl group-hover:scale-110 transition-transform">{study.icon}</span>
+                      <h3 className="font-heading text-lg font-semibold text-firefly group-hover:text-white transition-colors">
                         {study.title}
                       </h3>
                     </div>
-                    <p className="text-gray-600 text-sm leading-relaxed">
+                    <p className="text-gray-600 text-sm leading-relaxed group-hover:text-white/80 transition-colors">
                       {study.description}
                     </p>
                   </div>
@@ -220,7 +221,7 @@ export default function PartnersPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {successStories.map((story, i) => (
                 <ScrollReveal key={story.title} delay={i * 0.1} className="h-full">
-                  <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-8 h-full">
+                  <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-8 h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
                     <div className="flex items-center gap-3 mb-4">
                       <span className="text-3xl">{story.icon}</span>
                       <h3 className="font-heading text-lg font-semibold text-firefly">
@@ -231,12 +232,12 @@ export default function PartnersPage() {
                       {story.stats.map((stat) => (
                         <div
                           key={stat.label}
-                          className="bg-firefly rounded-lg p-3 text-center"
+                          className="bg-gray-50 rounded-lg p-3 text-center"
                         >
                           <p className="text-lg font-bold text-casablanca">
                             {stat.value}
                           </p>
-                          <p className="text-white/70 text-xs">{stat.label}</p>
+                          <p className="text-gray-600 text-xs">{stat.label}</p>
                         </div>
                       ))}
                     </div>
@@ -258,23 +259,7 @@ export default function PartnersPage() {
                 Common Questions
               </h2>
             </ScrollReveal>
-            <div className="space-y-4">
-              {faqItems.map((item, i) => (
-                <ScrollReveal key={item.question} delay={i * 0.05}>
-                  <details className="group bg-white rounded-xl shadow-sm">
-                    <summary className="flex items-center justify-between p-6 cursor-pointer font-semibold text-firefly">
-                      <span>{item.question}</span>
-                      <span className="ml-4 text-casablanca transition-transform group-open:rotate-45">
-                        +
-                      </span>
-                    </summary>
-                    <p className="px-6 pb-6 text-gray-600 -mt-2">
-                      {item.answer}
-                    </p>
-                  </details>
-                </ScrollReveal>
-              ))}
-            </div>
+            <ClientFAQ items={faqItems} />
           </div>
         </section>
 

@@ -4,6 +4,7 @@ import Footer from "@/components/layout/Footer";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import Button from "@/components/ui/Button";
 import GHLForm from "@/components/ui/GHLForm";
+import ClientFAQ from "@/components/ui/ClientFAQ";
 
 export const metadata: Metadata = {
   title: "For Neighbors | Borrow, Share & Help in Your Neighborhood | Tribes™",
@@ -149,10 +150,10 @@ const testimonial = {
   name: "Jamie T.",
   location: "Riverside Neighborhood",
   stats: [
-    { value: "12", label: "Items Borrowed" },
+    { value: "6", label: "Items Borrowed" },
     { value: "8", label: "Items Lent" },
     { value: "3", label: "Photo Sessions" },
-    { value: "$850", label: "Saved & Earned" },
+    { value: "$650+", label: "Saved & Earned" },
   ],
 };
 
@@ -271,7 +272,7 @@ export default function NeighborsPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {useCases.map((item, i) => (
                 <ScrollReveal key={item.title} delay={i * 0.1} className="h-full">
-                  <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-6 text-center h-full">
+                  <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-6 text-center h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
                     <div className="text-4xl mb-4">{item.icon}</div>
                     <h3 className="font-heading text-lg font-semibold text-firefly mb-2">
                       {item.title}
@@ -285,17 +286,17 @@ export default function NeighborsPage() {
         </section>
 
         {/* Categories */}
-        <section className="py-16 md:py-24 bg-gray-50">
+        <section className="py-16 md:py-24 bg-granny">
           <div className="max-w-[1200px] mx-auto px-4">
             <ScrollReveal>
-              <h2 className="font-heading text-2xl md:text-[1.7rem] font-bold text-firefly text-center mb-12">
+              <h2 className="font-heading text-2xl md:text-[1.7rem] font-bold text-white text-center mb-12">
                 Everything You Can Share, Borrow, and Offer
               </h2>
             </ScrollReveal>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {categories.map((cat, i) => (
                 <ScrollReveal key={cat.title} delay={i * 0.1} className="h-full">
-                  <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-6 h-full">
+                  <div className="bg-white rounded-xl shadow-sm p-6 h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
                     <h3 className="font-heading text-lg font-semibold text-firefly mb-4">
                       {cat.title}
                     </h3>
@@ -355,7 +356,7 @@ export default function NeighborsPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {benefits.map((item, i) => (
                 <ScrollReveal key={item.title} delay={i * 0.08} className="h-full">
-                  <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-6 h-full">
+                  <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-6 h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
                     <div className="text-3xl mb-3">{item.icon}</div>
                     <h3 className="font-heading text-lg font-semibold text-firefly mb-2">
                       {item.title}
@@ -369,10 +370,10 @@ export default function NeighborsPage() {
         </section>
 
         {/* Testimonial */}
-        <section className="py-16 md:py-24">
+        <section className="py-16 md:py-24 bg-granny">
           <div className="max-w-[1000px] mx-auto px-4">
             <ScrollReveal>
-              <h2 className="font-heading text-2xl md:text-[1.7rem] font-bold text-firefly text-center mb-12">
+              <h2 className="font-heading text-2xl md:text-[1.7rem] font-bold text-white text-center mb-12">
                 Meet Jamie: A Typical Tribes Neighbor
               </h2>
             </ScrollReveal>
@@ -426,7 +427,7 @@ export default function NeighborsPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {trustFeatures.map((item, i) => (
                 <ScrollReveal key={item.title} delay={i * 0.1} className="h-full">
-                  <div className="flex gap-4 items-start bg-white rounded-xl border border-gray-200 shadow-sm p-6 h-full">
+                  <div className="flex gap-4 items-start bg-white rounded-xl border border-gray-200 shadow-sm p-6 h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
                     <span className="text-2xl text-casablanca flex-shrink-0">
                       {item.icon}
                     </span>
@@ -453,23 +454,7 @@ export default function NeighborsPage() {
                 Common Questions
               </h2>
             </ScrollReveal>
-            <div className="space-y-4">
-              {faqItems.map((item, i) => (
-                <ScrollReveal key={item.question} delay={i * 0.05}>
-                  <details className="group bg-white rounded-xl shadow-sm">
-                    <summary className="flex items-center justify-between p-6 cursor-pointer font-semibold text-firefly">
-                      <span>{item.question}</span>
-                      <span className="ml-4 text-casablanca transition-transform group-open:rotate-45">
-                        +
-                      </span>
-                    </summary>
-                    <p className="px-6 pb-6 text-gray-600 -mt-2">
-                      {item.answer}
-                    </p>
-                  </details>
-                </ScrollReveal>
-              ))}
-            </div>
+            <ClientFAQ items={faqItems} />
           </div>
         </section>
 
