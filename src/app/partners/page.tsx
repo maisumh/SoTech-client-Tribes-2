@@ -167,18 +167,14 @@ export default function PartnersPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {partnerTypes.map((type, i) => (
                 <ScrollReveal key={type.title} delay={i * 0.1} className="h-full">
-                  <div className="bg-white rounded-xl shadow-sm overflow-hidden h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
-                    <div className="bg-gray-50 px-8 py-6 text-center">
-                      <h3 className="font-heading text-2xl font-bold text-firefly">
-                        {type.title}
-                      </h3>
-                      <p className="text-base text-gray-600 mt-1">
-                        {type.subtitle}
-                      </p>
-                    </div>
-                    <div className="px-8 py-6">
-                      <p className="text-gray-600">{type.description}</p>
-                    </div>
+                  <div className="bg-white rounded-xl shadow-sm p-8 h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+                    <h3 className="font-heading text-2xl font-bold text-firefly mb-1">
+                      {type.title}
+                    </h3>
+                    <p className="text-base text-gray-600 mb-4">
+                      {type.subtitle}
+                    </p>
+                    <p className="text-gray-600">{type.description}</p>
                   </div>
                 </ScrollReveal>
               ))}

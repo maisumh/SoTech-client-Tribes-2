@@ -4,7 +4,7 @@ import { FEATURES } from "@/lib/constants";
 
 export default function Features() {
   return (
-    <section className="py-16 md:py-24">
+    <section className="py-16 md:py-24 bg-gray-50">
       <div className="max-w-[1200px] mx-auto px-4">
         <ScrollReveal>
           <h2 className="font-heading text-2xl md:text-[1.7rem] font-bold text-firefly text-center mb-12">

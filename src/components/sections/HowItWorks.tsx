@@ -3,7 +3,7 @@ import { HOW_IT_WORKS } from "@/lib/constants";
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="py-16 md:py-24 bg-gray-50">
+    <section id="how-it-works" className="py-16 md:py-24">
       <div className="max-w-[900px] mx-auto px-4">
         <ScrollReveal>
           <h2 className="font-heading text-2xl md:text-[1.7rem] font-bold text-firefly text-center mb-12">
