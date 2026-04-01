@@ -37,7 +37,7 @@ export default function Audiences() {
                     </li>
                   ))}
                 </ul>
-                <Button href="#waitlist" variant="secondary" className="w-full">
+                <Button href={`/${audience.id}`} variant="secondary" className="w-full">
                   {audience.cta}
                 </Button>
               </div>

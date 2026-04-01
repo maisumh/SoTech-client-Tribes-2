@@ -35,8 +35,8 @@ export const BRAND = {
 };
 
 export const NAV_LINKS = [
-  { label: "Neighbors", href: "#neighbors" },
-  { label: "Partners", href: "#partners" },
+  { label: "Neighbors", href: "/neighbors" },
+  { label: "Partners", href: "/partners" },
 ];
 
 export const HERO = {
@@ -337,8 +337,8 @@ export const FOOTER = {
   links: {
     explore: [
       { label: "About Tribes", href: "#" },
-      { label: "Neighbors", href: "#neighbors" },
-      { label: "Partners", href: "#partners" },
+      { label: "Neighbors", href: "/neighbors" },
+      { label: "Partners", href: "/partners" },
       { label: "FAQ", href: "#faq" },
     ],
   },
