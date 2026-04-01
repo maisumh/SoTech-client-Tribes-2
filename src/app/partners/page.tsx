@@ -127,35 +127,31 @@ export default function PartnersPage() {
         <section className="pt-[calc(70px+2rem)] pb-12 md:pt-[calc(70px+4rem)] md:pb-20 bg-gradient-to-br from-gray-50 to-offwhite">
           <div className="max-w-[1200px] mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-              <ScrollReveal>
-                <div className="text-center md:text-left">
-                  <h1 className="font-heading text-3xl md:text-5xl font-bold text-firefly leading-tight mb-6">
-                    <span className="block">Build Tribes&#8482;.</span>
-                    <span className="block">Activate Communities.</span>
-                  </h1>
-                  <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                    Launch branded tribes, activate your members, and scale real
-                    community impact.
-                  </p>
-                  <div className="flex justify-center md:justify-start">
-                    <Button href="#partner-cta" size="large">
-                      Join the Waitlist
-                    </Button>
-                  </div>
-                  <p className="text-sm text-gray-500 mt-4">
-                    87% participation rate in active Tribes communities
-                  </p>
+              <div className="text-center md:text-left">
+                <h1 className="font-heading text-3xl md:text-5xl font-bold text-firefly leading-tight mb-6 animate-hero-fade-up" style={{ animationDelay: "0.1s" }}>
+                  <span className="block">Build Tribes&#8482;.</span>
+                  <span className="block">Activate Communities.</span>
+                </h1>
+                <p className="text-lg text-gray-600 mb-8 leading-relaxed animate-hero-fade-up" style={{ animationDelay: "0.25s" }}>
+                  Launch branded tribes, activate your members, and scale real
+                  community impact.
+                </p>
+                <div className="flex justify-center md:justify-start animate-hero-fade-up" style={{ animationDelay: "0.4s" }}>
+                  <Button href="#partner-cta" size="large">
+                    Join the Waitlist
+                  </Button>
                 </div>
-              </ScrollReveal>
-              <ScrollReveal delay={0.2}>
-                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
-                  <img
-                    src="https://storage.googleapis.com/msgsndr/TEAVsvTerVipIS3cla4Y/media/69501f87ee104758ebe639bc.jpeg"
-                    alt="Team celebrating partnership success with a high-five"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </ScrollReveal>
+                <p className="text-sm text-gray-500 mt-4 animate-hero-fade-up" style={{ animationDelay: "0.55s" }}>
+                  87% participation rate in active Tribes communities
+                </p>
+              </div>
+              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl animate-hero-fade-up" style={{ animationDelay: "0.3s" }}>
+                <img
+                  src="https://storage.googleapis.com/msgsndr/TEAVsvTerVipIS3cla4Y/media/69501f87ee104758ebe639bc.jpeg"
+                  alt="Team celebrating partnership success with a high-five"
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
           </div>
         </section>

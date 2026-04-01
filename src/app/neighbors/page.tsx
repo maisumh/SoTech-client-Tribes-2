@@ -227,35 +227,31 @@ export default function NeighborsPage() {
         <section className="pt-[calc(70px+2rem)] pb-12 md:pt-[calc(70px+4rem)] md:pb-20 bg-gradient-to-br from-gray-50 to-offwhite">
           <div className="max-w-[1200px] mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-              <ScrollReveal>
-                <div className="text-center md:text-left">
-                  <h1 className="font-heading text-3xl md:text-5xl font-bold text-firefly leading-tight mb-6">
-                    <span className="block">Your Neighborhood Has Everything.</span>
-                    <span className="block">Tribes&#8482; Helps You Find It.</span>
-                  </h1>
-                  <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                    Borrow, lend, help, hire, trade - connect with neighbors who
-                    have what you need and need what you have.
-                  </p>
-                  <div className="flex justify-center md:justify-start">
-                    <Button href="#neighbors-cta" size="large">
-                      Join the Waitlist
-                    </Button>
-                  </div>
-                  <p className="text-sm text-gray-500 mt-4">
-                    500+ neighbors already building their tribes
-                  </p>
+              <div className="text-center md:text-left">
+                <h1 className="font-heading text-3xl md:text-5xl font-bold text-firefly leading-tight mb-6 animate-hero-fade-up" style={{ animationDelay: "0.1s" }}>
+                  <span className="block">Your Neighborhood Has Everything.</span>
+                  <span className="block">Tribes&#8482; Helps You Find It.</span>
+                </h1>
+                <p className="text-lg text-gray-600 mb-8 leading-relaxed animate-hero-fade-up" style={{ animationDelay: "0.25s" }}>
+                  Borrow, lend, help, hire, trade - connect with neighbors who
+                  have what you need and need what you have.
+                </p>
+                <div className="flex justify-center md:justify-start animate-hero-fade-up" style={{ animationDelay: "0.4s" }}>
+                  <Button href="#neighbors-cta" size="large">
+                    Join the Waitlist
+                  </Button>
                 </div>
-              </ScrollReveal>
-              <ScrollReveal delay={0.2}>
-                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
+                <p className="text-sm text-gray-500 mt-4 animate-hero-fade-up" style={{ animationDelay: "0.55s" }}>
+                  500+ neighbors already building their tribes
+                </p>
+              </div>
+              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl animate-hero-fade-up" style={{ animationDelay: "0.3s" }}>
                   <img
                     src="https://storage.googleapis.com/msgsndr/TEAVsvTerVipIS3cla4Y/media/69501f87dda1928d2295b863.jpeg"
                     alt="Colorful miniature houses on green hills representing a vibrant neighborhood community"
                     className="w-full h-full object-cover"
                   />
-                </div>
-              </ScrollReveal>
+              </div>
             </div>
           </div>
         </section>

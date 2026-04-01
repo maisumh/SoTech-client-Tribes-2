@@ -28,26 +28,26 @@ body {
 
 /* Hero entrance animations — CSS-based for smooth first paint (no JS hydration delay) */
 @keyframes heroFadeUp {
-  from {
+  0% {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(25px);
   }
-  to {
+  100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
 .animate-hero-fade-up {
-  opacity: 0;
-  animation: heroFadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: heroFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+  will-change: opacity, transform;
 }
 
 @media (prefers-reduced-motion: reduce) {
   .animate-hero-fade-up {
-    opacity: 1;
-    animation: none;
-    transform: none;
+    opacity: 1 !important;
+    animation: none !important;
+    transform: none !important;
   }
 }
 
