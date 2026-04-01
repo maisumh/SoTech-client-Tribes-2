@@ -87,13 +87,21 @@ export const NEIGHBORHOOD = {
     "You don't know who has what. They don't know what you need. Tribes bridges that gap instantly.",
   ],
   stats: [
-    { value: "$0", label: "average value of unused household items¹" },
+    { value: "$7,000", target: 7000, prefix: "$", suffix: "", formatWithCommas: true, label: "average value of unused household items¹" },
     {
       value: "Fewer than 5",
+      target: null,
+      prefix: "",
+      suffix: "",
+      formatWithCommas: false,
       label: "the number of neighbors most people can identify²",
     },
     {
-      value: "0%",
+      value: "67%",
+      target: 67,
+      prefix: "",
+      suffix: "%",
+      formatWithCommas: false,
       label: "of Americans wish they knew their neighbors better³",
     },
   ],
@@ -248,9 +256,9 @@ export const IMPACT = {
     "We're starting in neighborhoods across America and expanding community by community, tribe by tribe.",
   ],
   metrics: [
-    { value: "0+", label: "Neighbors Connected" },
-    { value: "0+", label: "Tribes Forming" },
-    { value: "Spring 2026", label: "Launch Date" },
+    { value: "500+", target: 500, suffix: "+", label: "Neighbors Connected" },
+    { value: "50+", target: 50, suffix: "+", label: "Tribes Forming" },
+    { value: "Spring 2026", target: null, suffix: "", label: "Launch Date" },
   ],
 };
 

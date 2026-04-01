@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
-import { SITE } from "@/lib/constants";
+import { SITE, BRAND } from "@/lib/constants";
 
 const plusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -10,6 +10,7 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://trytribes.com"),
   title: SITE.title,
   description: SITE.description,
   openGraph: {
@@ -18,14 +19,27 @@ export const metadata: Metadata = {
     url: SITE.url,
     siteName: "Tribes",
     type: "website",
+    images: [
+      {
+        url: BRAND.logos.primaryDark,
+        width: 1200,
+        height: 630,
+        alt: "Tribes - Share Resources & Build Community",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Tribes™ | Share Resources & Build Community",
     description: SITE.description,
+    images: [BRAND.logos.primaryDark],
   },
   icons: {
-    icon: "https://ktboxzgxzbjajngatuho.supabase.co/storage/v1/object/public/brand-assets/611f4b15-3017-40d0-96b5-1f14208aef62/logos/favicon-light-bg.png",
+    icon: BRAND.logos.faviconLight,
+    apple: BRAND.logos.faviconDark,
+  },
+  other: {
+    "theme-color": "#103730",
   },
 };
 

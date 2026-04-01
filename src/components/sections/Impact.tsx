@@ -1,5 +1,41 @@
+"use client";
+
+import { useRef } from "react";
+import { useInView } from "framer-motion";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import { IMPACT } from "@/lib/constants";
+import { useCountUp } from "@/hooks/useCountUp";
+
+function AnimatedMetric({
+  value,
+  target,
+  suffix,
+  label,
+}: {
+  value: string;
+  target: number | null;
+  suffix: string;
+  label: string;
+}) {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: true, margin: "-80px" });
+  const animatedValue = useCountUp(
+    target ?? 0,
+    isInView && target !== null,
+    2000
+  );
+
+  const displayValue = target === null ? value : `${animatedValue}${suffix}`;
+
+  return (
+    <div ref={ref} className="bg-white/10 rounded-xl p-8 text-center">
+      <div className="text-3xl md:text-4xl font-bold text-casablanca mb-2 tabular-nums">
+        {displayValue}
+      </div>
+      <p className="text-white/80 text-sm">{label}</p>
+    </div>
+  );
+}
 
 export default function Impact() {
   return (
@@ -24,12 +60,12 @@ export default function Impact() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {IMPACT.metrics.map((metric, i) => (
             <ScrollReveal key={metric.label} delay={i * 0.15}>
-              <div className="bg-white/10 rounded-xl p-8 text-center">
-                <div className="text-3xl md:text-4xl font-bold text-casablanca mb-2 tabular-nums">
-                  {metric.value}
-                </div>
-                <p className="text-white/80 text-sm">{metric.label}</p>
-              </div>
+              <AnimatedMetric
+                value={metric.value}
+                target={metric.target}
+                suffix={metric.suffix}
+                label={metric.label}
+              />
             </ScrollReveal>
           ))}
         </div>

@@ -52,7 +52,7 @@ export default function Header() {
             </a>
           ))}
           <a
-            href="#waitlist"
+            href="#final-cta"
             className="bg-casablanca text-firefly font-semibold px-6 py-2 rounded-lg transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-casablanca/30"
           >
             Join Waitlist
@@ -100,7 +100,7 @@ export default function Header() {
             </a>
           ))}
           <a
-            href="#waitlist"
+            href="#final-cta"
             className="mt-6 bg-casablanca text-firefly font-semibold py-4 rounded-lg text-center text-lg"
             onClick={() => setMenuOpen(false)}
           >
