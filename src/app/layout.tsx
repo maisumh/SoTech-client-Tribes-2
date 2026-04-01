@@ -60,13 +60,6 @@ export default function RootLayout({
           Skip to content
         </a>
         {children}
-        <div
-          aria-hidden="true"
-          style={{
-            height: "env(safe-area-inset-bottom, 0px)",
-            backgroundColor: "#103730",
-          }}
-        />
       </body>
     </html>
   );
