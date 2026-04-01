@@ -4,6 +4,7 @@
 
 html {
   scroll-behavior: smooth;
+  background-color: #103730;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -12,8 +13,14 @@ html {
   }
 }
 
-html {
-  background-color: #103730;
+/* iOS safe area: green bar below footer */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  footer::after {
+    content: "";
+    display: block;
+    height: env(safe-area-inset-bottom, 0px);
+    background-color: #103730;
+  }
 }
 
 body {
