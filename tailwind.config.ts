@@ -22,12 +22,7 @@ const config: Config = {
         ink: "#0D0D0D",
       },
       fontFamily: {
-        heading: [
-          "'General Sans'",
-          "'Plus Jakarta Sans'",
-          "system-ui",
-          "sans-serif",
-        ],
+        heading: ["'Plus Jakarta Sans'", "system-ui", "sans-serif"],
         body: ["'Plus Jakarta Sans'", "system-ui", "sans-serif"],
       },
     },

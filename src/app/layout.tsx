@@ -35,8 +35,8 @@ export const metadata: Metadata = {
     images: [BRAND.logos.primaryDark],
   },
   icons: {
-    icon: BRAND.logos.faviconLight,
-    apple: BRAND.logos.faviconDark,
+    icon: "/favicon.png",
+    apple: "/favicon.png",
   },
   other: {
     "theme-color": "#103730",
@@ -53,10 +53,6 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://storage.googleapis.com" />
         <link rel="preconnect" href="https://ktboxzgxzbjajngatuho.supabase.co" />
-        <link
-          href="https://api.fontshare.com/v2/css?f[]=general-sans@500,600,700&display=swap"
-          rel="stylesheet"
-        />
       </head>
       <body>
         <a href="#main" className="skip-link">
