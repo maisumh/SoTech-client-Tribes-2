@@ -9,13 +9,13 @@ export default function TribeExamples() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {TRIBE_EXAMPLES.map((tribe, i) => (
             <ScrollReveal key={tribe.title} delay={i * 0.15}>
-              <div className="bg-white rounded-xl shadow-sm overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
-                <div className="relative aspect-[4/3]">
+              <div className="bg-white rounded-xl shadow-sm overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-md group">
+                <div className="relative aspect-[4/3] overflow-hidden">
                   <Image
                     src={tribe.image}
                     alt={tribe.title}
                     fill
-                    className="object-cover"
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
                     sizes="(max-width: 768px) 100vw, 33vw"
                   />
                 </div>

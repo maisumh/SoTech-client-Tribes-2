@@ -15,7 +15,7 @@ export default function TribeTypes() {
           {TRIBE_TYPES.items.map((type, i) => (
             <ScrollReveal key={type.title} delay={i * 0.1} className="h-full">
               <div className="bg-white rounded-xl shadow-sm p-8 text-center transition-all duration-300 hover:bg-firefly hover:-translate-y-1 hover:shadow-lg hover:shadow-firefly/25 group h-full">
-                <div className="text-4xl mb-4 flex justify-center group-hover:scale-110 transition-transform">
+                <div className="text-4xl mb-4 flex justify-center">
                   {type.icon}
                 </div>
                 <h3 className="font-heading text-lg font-semibold text-firefly mb-2 group-hover:text-white transition-colors">
