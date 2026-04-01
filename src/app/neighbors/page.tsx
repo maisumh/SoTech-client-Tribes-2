@@ -3,6 +3,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import Button from "@/components/ui/Button";
+import GHLForm from "@/components/ui/GHLForm";
 
 export const metadata: Metadata = {
   title: "For Neighbors | Borrow, Share & Help in Your Neighborhood | Tribes™",
@@ -479,31 +480,13 @@ export default function NeighborsPage() {
         >
           <div className="max-w-[600px] mx-auto px-4 text-center">
             <ScrollReveal>
-              <p className="text-lg mb-8">
+              <GHLForm />
+            </ScrollReveal>
+            <ScrollReveal delay={0.1}>
+              <p className="text-lg mt-8">
                 <span className="font-bold text-casablanca">500+</span>{" "}
                 neighbors already building their tribes
               </p>
-            </ScrollReveal>
-            <ScrollReveal delay={0.1}>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-                <form
-                  action="https://hooks.leadconnectorhq.com/webhook/TEAVsvTerVipIS3cla4Y"
-                  method="POST"
-                  className="space-y-4"
-                >
-                  <input type="hidden" name="source" value="neighbors-page" />
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Enter your email"
-                    required
-                    className="w-full px-4 py-3 rounded-lg bg-white text-ink placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-casablanca"
-                  />
-                  <Button type="submit" className="w-full">
-                    Join the Waitlist
-                  </Button>
-                </form>
-              </div>
             </ScrollReveal>
           </div>
         </section>
