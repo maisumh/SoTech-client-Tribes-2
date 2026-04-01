@@ -167,14 +167,18 @@ export default function PartnersPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {partnerTypes.map((type, i) => (
                 <ScrollReveal key={type.title} delay={i * 0.1} className="h-full">
-                  <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-8 h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
-                    <h3 className="font-heading text-xl font-semibold text-firefly mb-1">
-                      {type.title}
-                    </h3>
-                    <p className="text-sm text-casablanca-dark font-medium mb-4">
-                      {type.subtitle}
-                    </p>
-                    <p className="text-gray-600">{type.description}</p>
+                  <div className="bg-white rounded-xl shadow-sm overflow-hidden h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+                    <div className="bg-gray-50 px-8 py-6 text-center">
+                      <h3 className="font-heading text-xl font-semibold text-firefly">
+                        {type.title}
+                      </h3>
+                      <p className="text-sm text-casablanca-dark font-medium mt-1">
+                        {type.subtitle}
+                      </p>
+                    </div>
+                    <div className="px-8 py-6">
+                      <p className="text-gray-600">{type.description}</p>
+                    </div>
                   </div>
                 </ScrollReveal>
               ))}
@@ -195,8 +199,8 @@ export default function PartnersPage() {
                 <ScrollReveal key={study.title} delay={i * 0.1} className="h-full">
                   <div className="bg-white border-2 border-firefly rounded-xl p-8 h-full transition-all duration-300 hover:bg-firefly hover:-translate-y-1 hover:shadow-lg hover:shadow-firefly/25 group">
                     <div className="flex items-center gap-3 mb-4">
-                      <span className="text-3xl group-hover:scale-110 transition-transform">{study.icon}</span>
-                      <h3 className="font-heading text-lg font-semibold text-firefly group-hover:text-white transition-colors">
+                      <span className="text-4xl group-hover:scale-110 transition-transform">{study.icon}</span>
+                      <h3 className="font-heading text-xl font-semibold text-firefly group-hover:text-white transition-colors">
                         {study.title}
                       </h3>
                     </div>
@@ -232,12 +236,12 @@ export default function PartnersPage() {
                       {story.stats.map((stat) => (
                         <div
                           key={stat.label}
-                          className="bg-gray-50 rounded-lg p-3 text-center"
+                          className="bg-gray-50 rounded-lg p-4 text-center"
                         >
-                          <p className="text-lg font-bold text-casablanca">
+                          <p className="text-xl font-bold text-casablanca">
                             {stat.value}
                           </p>
-                          <p className="text-gray-600 text-xs">{stat.label}</p>
+                          <p className="text-gray-600 text-sm">{stat.label}</p>
                         </div>
                       ))}
                     </div>

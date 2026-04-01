@@ -229,9 +229,8 @@ export default function NeighborsPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <ScrollReveal>
                 <h1 className="font-heading text-3xl md:text-5xl font-bold text-firefly leading-tight mb-6">
-                  <span className="block">Your Neighborhood Has</span>
-                  <span className="block">Everything. Tribes&#8482;</span>
-                  <span className="block">Helps You Find It.</span>
+                  <span className="block">Your Neighborhood Has Everything.</span>
+                  <span className="block">Tribes&#8482; Helps You Find It.</span>
                 </h1>
                 <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                   Borrow, lend, help, hire, trade - connect with neighbors who
@@ -247,7 +246,7 @@ export default function NeighborsPage() {
               <ScrollReveal delay={0.2}>
                 <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
                   <img
-                    src="https://storage.googleapis.com/msgsndr/TEAVsvTerVipIS3cla4Y/media/69501f87dda1921bdd95b862.jpeg"
+                    src="https://storage.googleapis.com/msgsndr/TEAVsvTerVipIS3cla4Y/media/69501f87dda1928d2295b863.jpeg"
                     alt="Colorful miniature houses on green hills representing a vibrant neighborhood community"
                     className="w-full h-full object-cover"
                   />
@@ -257,7 +256,7 @@ export default function NeighborsPage() {
           </div>
         </section>
 
-        {/* Use Cases */}
+        {/* Use Cases — horizontal cards with left accent border */}
         <section className="py-16 md:py-24">
           <div className="max-w-[1200px] mx-auto px-4">
             <ScrollReveal>
@@ -269,15 +268,19 @@ export default function NeighborsPage() {
                 Tribes&#8482; however fits your day.
               </p>
             </ScrollReveal>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {useCases.map((item, i) => (
                 <ScrollReveal key={item.title} delay={i * 0.1} className="h-full">
-                  <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-6 text-center h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
-                    <div className="text-4xl mb-4">{item.icon}</div>
-                    <h3 className="font-heading text-lg font-semibold text-firefly mb-2">
-                      {item.title}
-                    </h3>
-                    <p className="text-gray-600 text-sm">{item.description}</p>
+                  <div className="flex gap-4 bg-white rounded-lg shadow-sm p-6 h-full border-l-4 border-casablanca transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+                    <div className="shrink-0 w-12 h-12 bg-gray-50 rounded-lg flex items-center justify-center text-2xl">
+                      {item.icon}
+                    </div>
+                    <div>
+                      <h3 className="font-heading text-lg font-semibold text-firefly mb-1">
+                        {item.title}
+                      </h3>
+                      <p className="text-gray-600 text-sm">{item.description}</p>
+                    </div>
                   </div>
                 </ScrollReveal>
               ))}
@@ -285,7 +288,7 @@ export default function NeighborsPage() {
           </div>
         </section>
 
-        {/* Categories */}
+        {/* Categories — pill groups */}
         <section className="py-16 md:py-24 bg-granny">
           <div className="max-w-[1200px] mx-auto px-4">
             <ScrollReveal>
@@ -293,21 +296,21 @@ export default function NeighborsPage() {
                 Everything You Can Share, Borrow, and Offer
               </h2>
             </ScrollReveal>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="space-y-10">
               {categories.map((cat, i) => (
-                <ScrollReveal key={cat.title} delay={i * 0.1} className="h-full">
-                  <div className="bg-white rounded-xl shadow-sm p-6 h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
-                    <h3 className="font-heading text-lg font-semibold text-firefly mb-4">
+                <ScrollReveal key={cat.title} delay={i * 0.1}>
+                  <div className="text-center">
+                    <h3 className="text-sm font-bold text-white uppercase tracking-widest mb-4">
                       {cat.title}
                     </h3>
-                    <div className="space-y-2">
+                    <div className="flex flex-wrap justify-center gap-3 max-w-[600px] mx-auto">
                       {cat.items.map((item) => (
-                        <div
+                        <span
                           key={item}
-                          className="text-gray-700 text-sm py-1.5 px-3 bg-gray-50 rounded-lg"
+                          className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full border-2 border-firefly bg-white text-firefly text-sm font-semibold transition-all duration-300 hover:bg-firefly hover:text-white hover:-translate-y-0.5"
                         >
                           {item}
-                        </div>
+                        </span>
                       ))}
                     </div>
                   </div>
@@ -345,7 +348,7 @@ export default function NeighborsPage() {
           </div>
         </section>
 
-        {/* Benefits */}
+        {/* Benefits — horizontal cards with icon circle */}
         <section className="py-16 md:py-24 bg-gray-50">
           <div className="max-w-[1200px] mx-auto px-4">
             <ScrollReveal>
@@ -356,12 +359,16 @@ export default function NeighborsPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {benefits.map((item, i) => (
                 <ScrollReveal key={item.title} delay={i * 0.08} className="h-full">
-                  <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-6 h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
-                    <div className="text-3xl mb-3">{item.icon}</div>
-                    <h3 className="font-heading text-lg font-semibold text-firefly mb-2">
-                      {item.title}
-                    </h3>
-                    <p className="text-gray-600 text-sm">{item.description}</p>
+                  <div className="flex gap-4 bg-white rounded-lg shadow-sm p-6 h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+                    <div className="shrink-0 w-10 h-10 bg-casablanca rounded-full flex items-center justify-center text-lg">
+                      {item.icon}
+                    </div>
+                    <div>
+                      <h3 className="font-heading text-lg font-semibold text-firefly mb-1">
+                        {item.title}
+                      </h3>
+                      <p className="text-gray-600 text-sm">{item.description}</p>
+                    </div>
                   </div>
                 </ScrollReveal>
               ))}
@@ -377,46 +384,41 @@ export default function NeighborsPage() {
                 Meet Jamie: A Typical Tribes Neighbor
               </h2>
             </ScrollReveal>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <ScrollReveal>
-                <div className="bg-white rounded-xl shadow-sm p-8">
-                  {testimonial.quotes.map((q, i) => (
-                    <p key={i} className="text-gray-700 mb-4 leading-relaxed">
-                      {q}
+            <ScrollReveal>
+              <div className="bg-white rounded-xl shadow-sm p-8 mb-8">
+                {testimonial.quotes.map((q, i) => (
+                  <p key={i} className="text-gray-700 mb-4 leading-relaxed">
+                    {q}
+                  </p>
+                ))}
+                <div className="mt-6 pt-4 border-t border-gray-100">
+                  <p className="font-semibold text-firefly">
+                    {testimonial.name}
+                  </p>
+                  <p className="text-sm text-gray-500">
+                    {testimonial.location}
+                  </p>
+                </div>
+              </div>
+            </ScrollReveal>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+              {testimonial.stats.map((stat, i) => (
+                <ScrollReveal key={stat.label} delay={i * 0.1}>
+                  <div className="bg-gray-50 rounded-xl p-6 text-center">
+                    <p className="text-2xl font-bold text-casablanca">
+                      {stat.value}
                     </p>
-                  ))}
-                  <div className="mt-6 pt-4 border-t border-gray-100">
-                    <p className="font-semibold text-firefly">
-                      {testimonial.name}
-                    </p>
-                    <p className="text-sm text-gray-500">
-                      {testimonial.location}
+                    <p className="text-gray-600 text-sm mt-1">
+                      {stat.label}
                     </p>
                   </div>
-                </div>
-              </ScrollReveal>
-              <ScrollReveal delay={0.15}>
-                <div className="grid grid-cols-2 gap-4 h-full content-center">
-                  {testimonial.stats.map((stat) => (
-                    <div
-                      key={stat.label}
-                      className="bg-firefly rounded-xl p-6 text-center"
-                    >
-                      <p className="text-2xl font-bold text-casablanca">
-                        {stat.value}
-                      </p>
-                      <p className="text-white/80 text-sm mt-1">
-                        {stat.label}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </ScrollReveal>
+                </ScrollReveal>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* Trust */}
+        {/* Trust — horizontal cards with icon */}
         <section className="py-16 md:py-24 bg-gray-50">
           <div className="max-w-[1000px] mx-auto px-4">
             <ScrollReveal>
@@ -427,10 +429,10 @@ export default function NeighborsPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {trustFeatures.map((item, i) => (
                 <ScrollReveal key={item.title} delay={i * 0.1} className="h-full">
-                  <div className="flex gap-4 items-start bg-white rounded-xl border border-gray-200 shadow-sm p-6 h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
-                    <span className="text-2xl text-casablanca flex-shrink-0">
+                  <div className="flex gap-4 items-start bg-white rounded-lg shadow-sm p-6 h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+                    <div className="shrink-0 w-10 h-10 bg-casablanca rounded-full flex items-center justify-center text-lg font-bold text-firefly">
                       {item.icon}
-                    </span>
+                    </div>
                     <div>
                       <h3 className="font-heading font-semibold text-firefly mb-1">
                         {item.title}
