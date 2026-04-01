@@ -21,10 +21,10 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: BRAND.logos.primaryDark,
+        url: "/og-home.png",
         width: 1200,
         height: 630,
-        alt: "Tribes - Share Resources & Build Community",
+        alt: "Tribes - Rediscover Your Neighborhood",
       },
     ],
   },
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Tribes™ | Share Resources & Build Community",
     description: SITE.description,
-    images: [BRAND.logos.primaryDark],
+    images: ["/og-home.png"],
   },
   icons: {
     icon: "/favicon.png",

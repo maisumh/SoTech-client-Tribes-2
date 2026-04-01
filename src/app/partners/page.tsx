@@ -10,6 +10,12 @@ export const metadata: Metadata = {
   title: "For Partners | Launch & Manage Community Tribes | Tribes™",
   description:
     "Launch branded tribes, activate your members, and scale real community impact.",
+  openGraph: {
+    images: [{ url: "/og-partners.png", width: 1200, height: 630 }],
+  },
+  twitter: {
+    images: ["/og-partners.png"],
+  },
 };
 
 const partnerTypes = [

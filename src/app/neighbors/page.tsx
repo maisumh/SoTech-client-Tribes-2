@@ -10,6 +10,12 @@ export const metadata: Metadata = {
   title: "For Neighbors | Borrow, Share & Help in Your Neighborhood | Tribes™",
   description:
     "Borrow, lend, help, hire, trade - connect with neighbors who have what you need and need what you have.",
+  openGraph: {
+    images: [{ url: "/og-neighbors.png", width: 1200, height: 630 }],
+  },
+  twitter: {
+    images: ["/og-neighbors.png"],
+  },
 };
 
 const useCases = [
