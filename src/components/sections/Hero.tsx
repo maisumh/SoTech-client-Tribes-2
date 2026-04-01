@@ -47,6 +47,7 @@ export default function Hero() {
             variants={stagger}
             initial="hidden"
             animate="visible"
+            className="text-center md:text-left"
           >
             <motion.h1
               className="font-heading text-3xl md:text-5xl font-bold text-firefly leading-tight mb-6"
@@ -67,7 +68,7 @@ export default function Hero() {
             </motion.p>
 
             <motion.div
-              className="flex flex-col sm:flex-row gap-4 mb-8"
+              className="flex flex-col sm:flex-row gap-4 mb-8 justify-center md:justify-start"
               variants={fadeUp}
             >
               <Button href="#final-cta" size="large">

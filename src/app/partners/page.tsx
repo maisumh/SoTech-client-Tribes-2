@@ -128,20 +128,24 @@ export default function PartnersPage() {
           <div className="max-w-[1200px] mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <ScrollReveal>
-                <h1 className="font-heading text-3xl md:text-5xl font-bold text-firefly leading-tight mb-6">
-                  <span className="block">Build Tribes&#8482;.</span>
-                  <span className="block">Activate Communities.</span>
-                </h1>
-                <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                  Launch branded tribes, activate your members, and scale real
-                  community impact.
-                </p>
-                <Button href="#partner-cta" size="large">
-                  Join the Waitlist
-                </Button>
-                <p className="text-sm text-gray-500 mt-4">
-                  87% participation rate in active Tribes communities
-                </p>
+                <div className="text-center md:text-left">
+                  <h1 className="font-heading text-3xl md:text-5xl font-bold text-firefly leading-tight mb-6">
+                    <span className="block">Build Tribes&#8482;.</span>
+                    <span className="block">Activate Communities.</span>
+                  </h1>
+                  <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                    Launch branded tribes, activate your members, and scale real
+                    community impact.
+                  </p>
+                  <div className="flex justify-center md:justify-start">
+                    <Button href="#partner-cta" size="large">
+                      Join the Waitlist
+                    </Button>
+                  </div>
+                  <p className="text-sm text-gray-500 mt-4">
+                    87% participation rate in active Tribes communities
+                  </p>
+                </div>
               </ScrollReveal>
               <ScrollReveal delay={0.2}>
                 <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
@@ -167,7 +171,7 @@ export default function PartnersPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {partnerTypes.map((type, i) => (
                 <ScrollReveal key={type.title} delay={i * 0.1} className="h-full">
-                  <div className="bg-white rounded-xl shadow-sm p-8 h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+                  <div className="bg-white rounded-xl shadow-sm p-8 h-full text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
                     <h3 className="font-heading text-2xl font-bold text-firefly mb-1">
                       {type.title}
                     </h3>
@@ -221,7 +225,7 @@ export default function PartnersPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {successStories.map((story, i) => (
                 <ScrollReveal key={story.title} delay={i * 0.1} className="h-full">
-                  <div className="bg-white rounded-xl shadow-sm p-8 h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+                  <div className="bg-white rounded-xl shadow-sm p-8 h-full text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
                     <div className="text-5xl mb-4">{story.icon}</div>
                     <h3 className="font-heading text-xl font-semibold text-firefly mb-4">
                       {story.title}
