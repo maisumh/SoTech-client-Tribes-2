@@ -29,6 +29,14 @@ Always compare against the original when making visual changes.
 - `/neighbors` — For Neighbors sub-page
 - `/partners` — For Partners sub-page
 
+## OG Images
+Static 1200x630 PNGs in `public/` — one per page (`og-home.png`, `og-neighbors.png`, `og-partners.png`). Generated via `scripts/generate-og.mjs` using sharp. To regenerate: `node scripts/generate-og.mjs` (all) or `node scripts/generate-og.mjs og-home` (single).
+
+## Brand Assets
+- **Logo files:** `public/tribes-logo-white.png` (white logo for dark backgrounds), `public/tribes-logo-white.svg`
+- **Favicon:** `public/favicon.png` (sourced from `../Marketing/Tribes_Brand_Assets/:Logo/PNG/Fav Icon-2.png`)
+- **Source brand assets:** `../Marketing/Tribes_Brand_Assets/` (logos, icons in PNG and SVG)
+
 ## Build & Dev
 ```
 npm install
