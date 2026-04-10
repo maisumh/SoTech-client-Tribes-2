@@ -66,7 +66,7 @@ export default async function DashboardPage({
   return (
     <div>
       {/* Header */}
-      <header className="mb-10 lg:mb-16">
+      <header className="admin-fade-up mb-10 lg:mb-16">
         <div className="text-[10px] uppercase tracking-[0.22em] text-granny mb-3 lg:mb-4">
           Dashboard
         </div>
@@ -113,7 +113,7 @@ export default async function DashboardPage({
       )}
 
       {/* Metric grid — 1 col mobile, 2 col sm, 3 col lg. Hairline gap via bg bleed. */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-granny/25 border border-granny/25">
+      <div className="admin-stagger grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-granny/25 border border-granny/25">
         <MetricCard label="New members" value={metrics?.new_users} />
         <MetricCard label="Wants & haves posted" value={metrics?.new_wants_haves} />
         <MetricCard label="Matches created" value={metrics?.matches} />

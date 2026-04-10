@@ -145,7 +145,7 @@ export default async function WantHavePage({
   return (
     <div>
       {/* Header */}
-      <header className="mb-8 lg:mb-12">
+      <header className="admin-fade-up mb-8 lg:mb-12">
         <div className="text-[10px] uppercase tracking-[0.22em] text-granny mb-3 lg:mb-4">
           Community
         </div>
@@ -269,7 +269,7 @@ export default async function WantHavePage({
       {/* Mobile: card list */}
       <div className="lg:hidden">
         {rows && rows.length > 0 ? (
-          <ul className="border-t border-granny/20">
+          <ul className="admin-stagger border-t border-granny/20">
             {rows.map((row) => {
               const user = row.user_id ? userMap.get(row.user_id) : null
               return (

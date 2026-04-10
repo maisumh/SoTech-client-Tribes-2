@@ -151,7 +151,7 @@ export default async function MatchesPage({
 
   return (
     <div>
-      <header className="mb-8 lg:mb-12">
+      <header className="admin-fade-up mb-8 lg:mb-12">
         <div className="text-[10px] uppercase tracking-[0.22em] text-granny mb-3 lg:mb-4">
           Community
         </div>
@@ -240,7 +240,7 @@ export default async function MatchesPage({
       {/* Mobile cards */}
       <div className="lg:hidden">
         {matches && matches.length > 0 ? (
-          <ul className="border-t border-granny/20">
+          <ul className="admin-stagger border-t border-granny/20">
             {matches.map((m) => {
               const sides = resolveMatchSides(m, whMap, userMap)
               return (

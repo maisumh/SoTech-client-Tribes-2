@@ -121,7 +121,7 @@ export default async function ActivityLogPage({
 
   return (
     <div>
-      <header className="mb-8 lg:mb-12">
+      <header className="admin-fade-up mb-8 lg:mb-12">
         <div className="text-[10px] uppercase tracking-[0.22em] text-granny mb-3 lg:mb-4">
           System
         </div>
@@ -138,7 +138,7 @@ export default async function ActivityLogPage({
         <div className="text-[10px] uppercase tracking-[0.22em] text-granny mb-3">
           Breakdown
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-px bg-granny/20 border border-granny/20">
+        <div className="admin-stagger grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-px bg-granny/20 border border-granny/20">
           {EVENT_TYPES.filter((t) => t !== 'all').map((type) => {
             const count = response.total_by_type[type] ?? 0
             const isActive = p.eventType === type
@@ -207,7 +207,7 @@ export default async function ActivityLogPage({
 
       {/* Event list — single layout, works on both mobile and desktop */}
       {response.events.length > 0 ? (
-        <ul className="border border-granny/20 divide-y divide-granny/15">
+        <ul className="admin-stagger border border-granny/20 divide-y divide-granny/15">
           {response.events.map((evt) => (
             <li
               key={evt.event_id}

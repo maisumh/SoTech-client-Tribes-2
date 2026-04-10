@@ -46,15 +46,16 @@ export function AdminShell({
         <MobileTopBar onMenuClick={() => setDrawerOpen(true)} />
 
         <Dialog.Portal>
-          {/* Overlay — dims background content */}
+          {/* Overlay — dims background content. CSS animation (not transition)
+              so Radix waits for animationend before unmounting on close. */}
           <Dialog.Overlay
-            className="lg:hidden fixed inset-0 bg-ink/60 backdrop-blur-sm z-40 transition-opacity duration-300 data-[state=open]:opacity-100 data-[state=closed]:opacity-0"
+            className="admin-overlay-anim lg:hidden fixed inset-0 bg-ink/60 backdrop-blur-sm z-40"
           />
 
-          {/* Drawer itself — slides in from the left */}
+          {/* Drawer itself — slides in from the left via CSS keyframes */}
           <Dialog.Content
             aria-describedby={undefined}
-            className="lg:hidden fixed inset-y-0 left-0 z-50 w-[280px] max-w-[85vw] bg-firefly text-offwhite shadow-[0_0_60px_rgba(0,0,0,0.4)] transition-transform duration-300 ease-out data-[state=open]:translate-x-0 data-[state=closed]:-translate-x-full focus:outline-none pt-[env(safe-area-inset-top)] pb-[env(safe-area-inset-bottom)]"
+            className="admin-drawer-anim lg:hidden fixed inset-y-0 left-0 z-50 w-[280px] max-w-[85vw] bg-firefly text-offwhite shadow-[0_0_60px_rgba(0,0,0,0.4)] focus:outline-none pt-[env(safe-area-inset-top)] pb-[env(safe-area-inset-bottom)]"
           >
             <Dialog.Title className="sr-only">Admin navigation</Dialog.Title>
 

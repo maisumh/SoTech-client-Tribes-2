@@ -105,7 +105,7 @@ export default async function NotificationsPage({
 
   return (
     <div>
-      <header className="mb-8 lg:mb-12">
+      <header className="admin-fade-up mb-8 lg:mb-12">
         <div className="text-[10px] uppercase tracking-[0.22em] text-granny mb-3 lg:mb-4">
           System
         </div>
@@ -171,7 +171,7 @@ export default async function NotificationsPage({
       {/* Mobile cards */}
       <div className="lg:hidden">
         {notifications && notifications.length > 0 ? (
-          <ul className="border-t border-granny/20">
+          <ul className="admin-stagger border-t border-granny/20">
             {notifications.map((n) => {
               const recipient = n.user_id ? userMap.get(n.user_id) : null
               const sender = n.created_by ? userMap.get(n.created_by) : null

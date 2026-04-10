@@ -138,7 +138,7 @@ export default async function LoginPage({
 
             <button
               type="submit"
-              className="w-full min-h-[52px] bg-firefly text-offwhite py-[15px] text-[11px] uppercase tracking-[0.24em] font-medium hover:bg-ink active:bg-ink transition-colors duration-200 mt-10"
+              className="admin-press w-full min-h-[52px] bg-firefly text-offwhite py-[15px] text-[11px] uppercase tracking-[0.24em] font-medium hover:bg-ink active:bg-ink duration-200 mt-10"
             >
               Sign in
             </button>

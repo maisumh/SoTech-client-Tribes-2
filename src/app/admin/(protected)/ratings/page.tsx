@@ -105,7 +105,7 @@ export default async function RatingsPage({
 
   return (
     <div>
-      <header className="mb-8 lg:mb-12">
+      <header className="admin-fade-up mb-8 lg:mb-12">
         <div className="text-[10px] uppercase tracking-[0.22em] text-granny mb-3 lg:mb-4">
           Moderation
         </div>
@@ -172,7 +172,7 @@ export default async function RatingsPage({
       {/* Mobile cards */}
       <div className="lg:hidden">
         {ratings && ratings.length > 0 ? (
-          <ul className="border-t border-granny/20">
+          <ul className="admin-stagger border-t border-granny/20">
             {ratings.map((r) => {
               const rater = r.ratting_by ? userMap.get(r.ratting_by) : null
               const ratee = r.ratting_to ? userMap.get(r.ratting_to) : null
