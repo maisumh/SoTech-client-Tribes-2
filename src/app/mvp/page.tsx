@@ -630,33 +630,50 @@ export default function MVPPage() {
             </ScrollReveal>
 
             <div className="relative">
+              {/* Vertical timeline line */}
               <div
-                className="hidden md:block absolute left-[7.5rem] top-6 bottom-6 w-0.5 bg-gradient-to-b from-casablanca via-casablanca/50 to-transparent"
+                className="absolute left-[11px] md:left-[15px] top-4 bottom-4 w-0.5 bg-gradient-to-b from-casablanca via-casablanca/60 to-casablanca/10"
                 aria-hidden="true"
               />
-              <div className="space-y-8">
+
+              <div className="space-y-5">
                 {TIMELINE.map((stage, i) => (
-                  <ScrollReveal key={stage.week} delay={i * 0.1}>
-                    <div className="flex flex-col md:flex-row gap-4 md:gap-8">
-                      <div className="md:w-32 shrink-0 md:text-right">
-                        <div className="inline-flex items-center md:justify-end gap-3 md:block">
-                          <span className="text-xs font-bold tracking-widest uppercase text-casablanca-dark">
-                            {stage.week}
-                          </span>
-                          <div className="hidden md:block w-3 h-3 rounded-full bg-casablanca shadow-md shadow-casablanca/40 md:ml-auto md:-mr-[1.4rem] md:mt-2" />
-                        </div>
+                  <ScrollReveal key={stage.week} delay={i * 0.08}>
+                    <div className="relative pl-10 md:pl-14">
+                      {/* Dot sitting on the line */}
+                      <div
+                        className="absolute left-[3px] md:left-[5px] top-[22px] w-[18px] h-[18px] md:w-[22px] md:h-[22px] rounded-full bg-casablanca flex items-center justify-center"
+                        style={{
+                          boxShadow:
+                            "0 0 0 5px #E7EBEA, 0 4px 14px rgba(246,183,74,0.35)",
+                        }}
+                        aria-hidden="true"
+                      >
+                        <span className="font-heading text-[10px] md:text-xs font-extrabold text-firefly leading-none">
+                          {i + 1}
+                        </span>
                       </div>
-                      <div className="flex-1 bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-                        <h3 className="font-heading text-xl font-bold text-firefly mb-3">
+
+                      {/* Card */}
+                      <div className="bg-white rounded-xl p-6 md:p-7 shadow-sm border border-gray-100 hover:shadow-lg hover:border-casablanca/30 transition-all duration-300">
+                        <div className="flex items-start justify-between gap-4 mb-3 flex-wrap">
+                          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-casablanca/10 border border-casablanca/30">
+                            <span className="w-1.5 h-1.5 rounded-full bg-casablanca-dark" />
+                            <span className="text-[11px] font-extrabold tracking-[0.15em] uppercase text-casablanca-dark">
+                              {stage.week}
+                            </span>
+                          </div>
+                        </div>
+                        <h3 className="font-heading text-xl md:text-2xl font-extrabold text-firefly mb-4 leading-tight">
                           {stage.title}
                         </h3>
-                        <ul className="space-y-2">
+                        <ul className="space-y-2.5">
                           {stage.items.map((item) => (
                             <li
                               key={item}
                               className="flex gap-3 text-gray-600 text-sm leading-relaxed"
                             >
-                              <span className="text-casablanca-dark shrink-0 mt-0.5">
+                              <span className="text-casablanca-dark shrink-0 mt-0.5 font-bold">
                                 →
                               </span>
                               <span>{item}</span>
