@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import ScrollReveal from "@/components/ui/ScrollReveal";
-import Button from "@/components/ui/Button";
 import Card from "@/components/ui/Card";
 import { BRAND } from "@/lib/constants";
 
@@ -689,24 +688,6 @@ export default function MVPPage() {
           </div>
         </section>
 
-        {/* Final CTA */}
-        <section className="py-16 md:py-24 bg-firefly text-white">
-          <div className="max-w-[720px] mx-auto px-4 text-center">
-            <ScrollReveal>
-              <h2 className="font-heading text-3xl md:text-4xl font-extrabold mb-5">
-                Ready to launch small and learn fast?
-              </h2>
-              <p className="text-lg text-white/75 mb-8 leading-relaxed">
-                This plan is built to move. Prereqs confirmed in week one,
-                first invites in week two, first shipped improvements by
-                week three.
-              </p>
-              <Button href="mailto:hello@trytribes.com" size="large">
-                Let&apos;s get started
-              </Button>
-            </ScrollReveal>
-          </div>
-        </section>
       </main>
 
       {/* Footer */}
