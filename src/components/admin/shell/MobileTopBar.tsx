@@ -1,6 +1,7 @@
 'use client'
 
 import { usePathname } from 'next/navigation'
+import { TribesLogo } from '@/components/admin/brand/TribesLogo'
 
 // Map route prefixes to the section title shown in the mobile top bar.
 // Order matters: longer/more-specific paths first.
@@ -52,8 +53,8 @@ export function MobileTopBar({ onMenuClick }: { onMenuClick: () => void }) {
         </div>
 
         {/* Brand mark (right) — purely decorative, keeps layout balanced */}
-        <div className="-mr-1 text-[9px] uppercase tracking-[0.22em] text-granny font-medium w-11 text-right">
-          Tribes
+        <div className="w-11 flex justify-end">
+          <TribesLogo className="w-7 h-7 text-firefly" />
         </div>
       </div>
     </div>

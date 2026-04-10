@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { signIn } from './actions'
+import { TribesLogo } from '@/components/admin/brand/TribesLogo'
 
 export const metadata: Metadata = {
   title: 'Sign in — Tribes Admin',
@@ -31,12 +32,15 @@ export default async function LoginPage({
         />
 
         {/* Brand mark */}
-        <div className="relative">
-          <div className="text-[10px] uppercase tracking-[0.24em] text-casablanca">
-            Tribes
-          </div>
-          <div className="mt-1 text-3xl font-extralight leading-none">
-            Admin
+        <div className="relative flex items-center gap-4">
+          <TribesLogo className="w-14 h-14 -ml-2 text-offwhite shrink-0" />
+          <div>
+            <div className="text-[10px] uppercase tracking-[0.24em] text-casablanca">
+              Admin
+            </div>
+            <div className="mt-0.5 text-[13px] font-light text-offwhite/60 leading-none">
+              Tribes community panel
+            </div>
           </div>
         </div>
 
@@ -64,17 +68,15 @@ export default async function LoginPage({
       <div className="flex items-center justify-center min-h-screen lg:min-h-0 px-6 py-12 sm:px-10 lg:p-16 bg-offwhite text-ink pt-[max(3rem,env(safe-area-inset-top))] pb-[max(3rem,env(safe-area-inset-bottom))]">
         <div className="w-full max-w-[380px]">
           {/* Mobile brand mark — hidden on desktop (already in left panel) */}
-          <div className="lg:hidden mb-10 text-center relative">
+          <div className="lg:hidden mb-10 flex flex-col items-center relative">
             {/* Subtle casablanca accent behind the mark */}
             <div
               aria-hidden
               className="absolute left-1/2 -top-6 w-40 h-40 -translate-x-1/2 rounded-full bg-casablanca/15 blur-3xl pointer-events-none"
             />
-            <div className="relative">
-              <div className="text-[10px] uppercase tracking-[0.24em] text-granny">
-                Tribes
-              </div>
-              <div className="mt-1 text-[32px] font-extralight text-firefly leading-none">
+            <div className="relative flex flex-col items-center">
+              <TribesLogo className="w-16 h-16 text-firefly" />
+              <div className="mt-3 text-[9px] uppercase tracking-[0.24em] text-granny">
                 Admin
               </div>
             </div>

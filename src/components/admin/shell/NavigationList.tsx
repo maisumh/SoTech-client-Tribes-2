@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { signOut } from '@/app/admin/login/actions'
+import { TribesLogo } from '@/components/admin/brand/TribesLogo'
 
 type NavItem = { href: string; label: string }
 type NavSection = { label: string; items: NavItem[] }
@@ -53,11 +54,16 @@ export function NavigationList({ userEmail }: { userEmail: string }) {
     <div className="flex flex-col h-full">
       {/* Brand mark */}
       <div className="px-7 pt-8 pb-10 lg:pt-10 lg:pb-14">
-        <div className="text-[10px] uppercase tracking-[0.22em] text-casablanca">
-          Tribes
-        </div>
-        <div className="mt-1 text-[22px] font-extralight leading-none">
-          Admin
+        <div className="flex items-center gap-3">
+          <TribesLogo className="w-10 h-10 -ml-1 text-offwhite shrink-0" />
+          <div>
+            <div className="text-[9px] uppercase tracking-[0.24em] text-casablanca">
+              Admin
+            </div>
+            <div className="text-[11px] font-light text-offwhite/50 leading-none mt-0.5">
+              Tribes
+            </div>
+          </div>
         </div>
       </div>
 
