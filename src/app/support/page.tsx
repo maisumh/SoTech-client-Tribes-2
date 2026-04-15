@@ -74,23 +74,6 @@ const faqItems = [
   },
 ];
 
-function EnvelopeMark() {
-  return (
-    <svg
-      viewBox="0 0 72 72"
-      className="w-16 h-16 md:w-20 md:h-20"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.25"
-      aria-hidden="true"
-    >
-      <rect x="6" y="16" width="60" height="40" rx="2" />
-      <path d="M6 20 L36 42 L66 20" />
-      <circle cx="58" cy="52" r="6" fill="currentColor" stroke="none" opacity="0.85" />
-    </svg>
-  );
-}
-
 export default function SupportPage() {
   return (
     <>
@@ -177,17 +160,15 @@ export default function SupportPage() {
         <section className="relative border-y border-firefly/10 bg-gradient-to-b from-offwhite via-white to-offwhite">
           <div className="max-w-[1200px] mx-auto px-6 md:px-10 lg:px-12 py-14 md:py-20">
             <ScrollReveal>
-              <div className="grid grid-cols-1 md:grid-cols-[auto_1fr_auto] items-center gap-8 md:gap-12">
-                <div className="text-firefly/80">
-                  <EnvelopeMark />
-                </div>
-                <div>
-                  <div className="text-[10px] md:text-[11px] uppercase tracking-[0.35em] text-firefly/50 mb-3">
+              <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] items-center gap-8 md:gap-12">
+                <div className="text-center md:text-left">
+                  <div className="text-[10px] md:text-[11px] uppercase tracking-[0.35em] text-firefly/50 mb-4">
                     — Write to us directly
                   </div>
                   <a
                     href={`mailto:${CONTACT_EMAIL}`}
-                    className="group inline-flex items-baseline flex-wrap gap-x-3 font-heading text-2xl sm:text-3xl md:text-5xl font-extralight text-firefly transition-colors hover:text-casablanca"
+                    className="group inline-flex items-baseline flex-wrap justify-center md:justify-start gap-x-3 font-heading font-extralight text-firefly transition-colors hover:text-casablanca"
+                    style={{ fontSize: "clamp(1.5rem, 3.5vw, 3.25rem)" }}
                   >
                     <span className="relative">
                       {CONTACT_EMAIL}

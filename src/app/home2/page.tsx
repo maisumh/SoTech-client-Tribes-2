@@ -188,9 +188,12 @@ export default function Home2() {
           />
           <div className="relative max-w-[1200px] mx-auto px-6 md:px-10 lg:px-12">
             <ScrollReveal>
-              <div className="mb-16 md:mb-24 max-w-3xl text-center md:text-left mx-auto md:mx-0">
+              <div className="mb-16 md:mb-24 text-center md:text-left">
                 <Kicker label="By the numbers" num="003" tone="dark" />
-                <h2 className="font-heading text-4xl md:text-6xl lg:text-7xl font-extralight leading-[1.02] tracking-[-0.02em]">
+                <h2
+                  className="font-heading font-extralight leading-[1.02] tracking-[-0.02em]"
+                  style={{ fontSize: "clamp(2.5rem, 6vw, 5.5rem)" }}
+                >
                   {NEIGHBORHOOD.title[0]}<br />
                   <em className="font-light not-italic text-casablanca">{NEIGHBORHOOD.title[1]}</em>
                 </h2>
@@ -221,10 +224,13 @@ export default function Home2() {
         <section className="py-24 md:py-32">
           <div className="max-w-[1100px] mx-auto px-6 md:px-10 lg:px-12">
             <ScrollReveal>
-              <div className="grid grid-cols-1 md:grid-cols-[auto_1fr] items-end gap-6 md:gap-12 mb-16 md:mb-24 text-center md:text-left">
+              <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] items-end gap-6 md:gap-12 mb-16 md:mb-24 text-center md:text-left">
                 <div>
                   <Kicker label="How it works" num="004" />
-                  <h2 className="font-heading text-4xl md:text-6xl lg:text-7xl font-extralight text-firefly leading-[1.02] tracking-[-0.02em]">
+                  <h2
+                    className="font-heading font-extralight text-firefly leading-[1.02] tracking-[-0.02em]"
+                    style={{ fontSize: "clamp(2.5rem, 6vw, 5.5rem)" }}
+                  >
                     {HOW_IT_WORKS.title[0]}<br />
                     <em className="font-light not-italic text-casablanca">{HOW_IT_WORKS.title[1]}</em>
                   </h2>
@@ -270,9 +276,12 @@ export default function Home2() {
         <section className="py-24 md:py-32 bg-gradient-to-b from-offwhite via-white to-offwhite border-t border-firefly/10">
           <div className="max-w-[1240px] mx-auto px-6 md:px-10 lg:px-12">
             <ScrollReveal>
-              <div className="max-w-3xl mb-16 md:mb-20 text-center md:text-left mx-auto md:mx-0">
+              <div className="mb-16 md:mb-20 text-center md:text-left">
                 <Kicker label="Tribe types" num="005" />
-                <h2 className="font-heading text-4xl md:text-6xl lg:text-7xl font-extralight text-firefly leading-[1.02] tracking-[-0.02em]">
+                <h2
+                  className="font-heading font-extralight text-firefly leading-[1.02] tracking-[-0.02em]"
+                  style={{ fontSize: "clamp(2.5rem, 6vw, 5.5rem)" }}
+                >
                   What kind of tribe<br />
                   will <em className="font-light not-italic text-casablanca">you build?</em>
                 </h2>
@@ -286,10 +295,14 @@ export default function Home2() {
               {TRIBE_TYPES.items.map((item, i) => (
                 <ScrollReveal key={item.title} delay={i * 0.05}>
                   <div className="group bg-offwhite h-full p-8 md:p-10 transition-colors hover:bg-white relative overflow-hidden">
-                    <div className="text-[10px] uppercase tracking-[0.3em] text-firefly/30 mb-6 group-hover:text-casablanca transition-colors">
-                      — {String(i + 1).padStart(2, "0")}
+                    <div className="flex items-baseline justify-between mb-8">
+                      <span className="font-heading text-5xl md:text-6xl font-extralight text-firefly/20 group-hover:text-casablanca tabular-nums tracking-tight leading-none transition-colors">
+                        {String(i + 1).padStart(2, "0")}
+                      </span>
+                      <span className="text-[10px] uppercase tracking-[0.3em] text-firefly/30 group-hover:text-casablanca transition-colors">
+                        Tribe
+                      </span>
                     </div>
-                    <div className="text-4xl mb-6">{item.icon}</div>
                     <h3 className="font-heading text-xl md:text-2xl font-medium text-firefly mb-4 leading-snug">
                       {item.title}
                     </h3>
@@ -313,21 +326,26 @@ export default function Home2() {
         <section className="py-24 md:py-32">
           <div className="max-w-[1200px] mx-auto px-6 md:px-10 lg:px-12">
             <ScrollReveal>
-              <div className="max-w-3xl mb-16 md:mb-20 text-center md:text-left mx-auto md:mx-0">
+              <div className="mb-16 md:mb-20 text-center md:text-left">
                 <Kicker label="Features" num="006" />
-                <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-extralight text-firefly leading-[1.04] tracking-[-0.02em]">
+                <h2
+                  className="font-heading font-extralight text-firefly leading-[1.04] tracking-[-0.02em]"
+                  style={{ fontSize: "clamp(2.5rem, 5.5vw, 5rem)" }}
+                >
                   Built for <em className="font-light not-italic text-casablanca">real communities.</em>
                 </h2>
               </div>
             </ScrollReveal>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-14">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-14 md:gap-y-16">
               {FEATURES.items.map((item, i) => (
                 <ScrollReveal key={item.title} delay={i * 0.05}>
-                  <div className="group">
-                    <div className="flex items-start gap-5 mb-4">
-                      <span className="text-3xl shrink-0 leading-none">{item.icon}</span>
-                      <span className="text-[10px] uppercase tracking-[0.3em] text-firefly/30 group-hover:text-casablanca transition-colors pt-2">
+                  <div className="group border-t border-firefly/15 pt-6 md:pt-8">
+                    <div className="flex items-baseline justify-between mb-6">
+                      <span className="font-heading text-4xl md:text-5xl font-extralight text-firefly/25 group-hover:text-casablanca tabular-nums tracking-tight leading-none transition-colors">
                         {String(i + 1).padStart(2, "0")}
+                      </span>
+                      <span className="text-[10px] uppercase tracking-[0.3em] text-firefly/30 group-hover:text-casablanca transition-colors">
+                        Feature
                       </span>
                     </div>
                     <h3 className="font-heading text-lg md:text-xl font-medium text-firefly mb-3 leading-snug">
@@ -349,10 +367,13 @@ export default function Home2() {
             aria-hidden="true"
             className="absolute -bottom-40 -left-40 w-[500px] h-[500px] rounded-full bg-casablanca/10 blur-3xl pointer-events-none"
           />
-          <div className="relative max-w-[1000px] mx-auto px-6 md:px-10 lg:px-12 text-center md:text-left">
+          <div className="relative max-w-[1200px] mx-auto px-6 md:px-10 lg:px-12 text-center md:text-left">
             <ScrollReveal>
               <Kicker label="Our people" num="007" tone="dark" />
-              <h2 className="font-heading text-4xl md:text-6xl lg:text-7xl font-extralight leading-[1.04] tracking-[-0.02em] mb-16">
+              <h2
+                className="font-heading font-extralight leading-[1.04] tracking-[-0.02em] mb-16"
+                style={{ fontSize: "clamp(2.5rem, 6vw, 5.5rem)" }}
+              >
                 We all need <em className="font-light not-italic text-casablanca">our people.</em>
               </h2>
               <div className="grid md:grid-cols-2 gap-8 md:gap-12">
@@ -373,9 +394,12 @@ export default function Home2() {
         <section className="py-24 md:py-32">
           <div className="max-w-[1200px] mx-auto px-6 md:px-10 lg:px-12">
             <ScrollReveal>
-              <div className="max-w-3xl mb-16 md:mb-20 text-center md:text-left mx-auto md:mx-0">
+              <div className="mb-16 md:mb-20 text-center md:text-left">
                 <Kicker label="Who it's for" num="008" />
-                <h2 className="font-heading text-4xl md:text-6xl lg:text-7xl font-extralight text-firefly leading-[1.02] tracking-[-0.02em]">
+                <h2
+                  className="font-heading font-extralight text-firefly leading-[1.02] tracking-[-0.02em]"
+                  style={{ fontSize: "clamp(2.5rem, 6vw, 5.5rem)" }}
+                >
                   Built for everyone<br />
                   on your <em className="font-light not-italic text-casablanca">block.</em>
                 </h2>
@@ -386,15 +410,20 @@ export default function Home2() {
                 <ScrollReveal key={aud.id} delay={i * 0.1}>
                   <Link
                     href={`/${aud.id}`}
-                    className="group relative block bg-offwhite border border-firefly/10 p-8 md:p-12 transition-all hover:-translate-y-1 hover:shadow-[0_30px_60px_-20px_rgba(16,55,48,0.2)] hover:border-casablanca/40"
+                    className="group relative block bg-offwhite border border-firefly/10 p-8 md:p-12 transition-all hover:-translate-y-1 hover:shadow-[0_30px_60px_-20px_rgba(16,55,48,0.2)] hover:border-casablanca/40 text-left"
                   >
-                    <div className="flex items-start justify-between mb-8">
-                      <div className="text-4xl">{aud.icon}</div>
-                      <span className="text-[10px] uppercase tracking-[0.3em] text-firefly/30 group-hover:text-casablanca transition-colors pt-2">
-                        — {String(i + 1).padStart(2, "0")}
+                    <div className="flex items-baseline justify-between mb-8">
+                      <span className="font-heading text-5xl md:text-6xl font-extralight text-firefly/25 group-hover:text-casablanca tabular-nums tracking-tight leading-none transition-colors">
+                        {String(i + 1).padStart(2, "0")}
+                      </span>
+                      <span className="text-[10px] uppercase tracking-[0.3em] text-firefly/30 group-hover:text-casablanca transition-colors">
+                        {aud.id === "neighbors" ? "Neighbor" : "Partner"}
                       </span>
                     </div>
-                    <h3 className="font-heading text-3xl md:text-4xl font-extralight text-firefly mb-4 leading-tight tracking-[-0.01em]">
+                    <h3
+                      className="font-heading font-extralight text-firefly mb-4 leading-tight tracking-[-0.01em]"
+                      style={{ fontSize: "clamp(1.875rem, 3vw, 2.75rem)" }}
+                    >
                       {aud.title}
                     </h3>
                     <p className="text-gray-600 mb-8 leading-[1.7]">{aud.subtitle}</p>
@@ -421,13 +450,16 @@ export default function Home2() {
         <section className="py-24 md:py-32 bg-gradient-to-b from-offwhite via-white to-offwhite border-y border-firefly/10">
           <div className="max-w-[1200px] mx-auto px-6 md:px-10 lg:px-12">
             <ScrollReveal>
-              <div className="max-w-3xl mb-16 md:mb-20 text-center md:text-left mx-auto md:mx-0">
+              <div className="mb-16 md:mb-20 text-center md:text-left">
                 <Kicker label="The impact" num="009" />
-                <h2 className="font-heading text-4xl md:text-6xl lg:text-7xl font-extralight text-firefly leading-[1.02] tracking-[-0.02em]">
+                <h2
+                  className="font-heading font-extralight text-firefly leading-[1.02] tracking-[-0.02em]"
+                  style={{ fontSize: "clamp(2.5rem, 6vw, 5.5rem)" }}
+                >
                   Stronger tribes.<br />
                   <em className="font-light not-italic text-casablanca">Stronger neighborhoods.</em>
                 </h2>
-                <div className="mt-8 space-y-4 text-gray-700 leading-[1.7] text-lg">
+                <div className="mt-8 space-y-4 text-gray-700 leading-[1.7] text-lg max-w-2xl mx-auto md:mx-0">
                   {IMPACT.paragraphs.map((p, i) => (
                     <p key={i}>{p}</p>
                   ))}
@@ -460,7 +492,10 @@ export default function Home2() {
                 <span aria-hidden="true" className="absolute -top-3 left-10 w-6 h-6 bg-casablanca" />
                 <span aria-hidden="true" className="absolute -bottom-3 right-10 w-6 h-6 bg-casablanca/60" />
                 <Kicker label="Founding member" num="010" tone="dark" />
-                <h2 className="font-heading text-3xl md:text-5xl lg:text-6xl font-extralight leading-[1.04] tracking-[-0.02em] mb-12 max-w-3xl mx-auto md:mx-0">
+                <h2
+                  className="font-heading font-extralight leading-[1.04] tracking-[-0.02em] mb-12"
+                  style={{ fontSize: "clamp(2rem, 4.5vw, 4rem)" }}
+                >
                   Shape your neighborhood&rsquo;s tribes <em className="font-light not-italic text-casablanca">from day one.</em>
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4 mb-12 max-w-xl mx-auto md:mx-0 md:max-w-none">
@@ -489,11 +524,13 @@ export default function Home2() {
         <section className="py-24 md:py-32 bg-gradient-to-b from-offwhite to-white border-t border-firefly/10">
           <div className="max-w-[1200px] mx-auto px-6 md:px-10 lg:px-12">
             <ScrollReveal>
-              <div className="max-w-3xl mb-16 md:mb-20 text-center md:text-left mx-auto md:mx-0">
+              <div className="mb-16 md:mb-20 text-center md:text-left">
                 <Kicker label="In their words" num="011" />
-                <h2 className="font-heading text-4xl md:text-6xl lg:text-7xl font-extralight text-firefly leading-[1.02] tracking-[-0.02em]">
-                  Notes from<br />
-                  <em className="font-light not-italic text-casablanca">early tribes.</em>
+                <h2
+                  className="font-heading font-extralight text-firefly leading-[1.02] tracking-[-0.02em]"
+                  style={{ fontSize: "clamp(2.5rem, 6vw, 5.5rem)" }}
+                >
+                  Notes from <em className="font-light not-italic text-casablanca">early tribes.</em>
                 </h2>
               </div>
             </ScrollReveal>
@@ -528,10 +565,13 @@ export default function Home2() {
         <section className="py-24 md:py-32">
           <div className="max-w-[920px] mx-auto px-6 md:px-10 lg:px-12">
             <ScrollReveal>
-              <div className="grid grid-cols-1 md:grid-cols-[auto_1fr] items-end gap-6 md:gap-12 mb-14 md:mb-20 text-center md:text-left">
+              <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] items-end gap-6 md:gap-12 mb-14 md:mb-20 text-center md:text-left">
                 <div>
                   <Kicker label="Questions" num="012" />
-                  <h2 className="font-heading text-4xl md:text-6xl font-extralight text-firefly leading-[1.02] tracking-[-0.02em]">
+                  <h2
+                    className="font-heading font-extralight text-firefly leading-[1.02] tracking-[-0.02em]"
+                    style={{ fontSize: "clamp(2.5rem, 5.5vw, 5rem)" }}
+                  >
                     Asked &amp; <em className="font-light not-italic text-casablanca">answered.</em>
                   </h2>
                 </div>
@@ -567,7 +607,10 @@ export default function Home2() {
             <ScrollReveal>
               <div className="text-center mb-14 md:mb-20">
                 <Kicker label="Join us" num="013" tone="center" />
-                <h2 className="font-heading text-4xl md:text-6xl lg:text-7xl font-extralight leading-[1.02] tracking-[-0.02em]">
+                <h2
+                  className="font-heading font-extralight leading-[1.02] tracking-[-0.02em]"
+                  style={{ fontSize: "clamp(2.5rem, 6vw, 5.5rem)" }}
+                >
                   Ready to meet <em className="font-light not-italic text-casablanca">your block?</em>
                 </h2>
                 <p className="mt-8 text-white/70 max-w-xl mx-auto leading-[1.7] text-lg">
