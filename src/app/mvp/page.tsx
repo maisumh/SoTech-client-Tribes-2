@@ -177,35 +177,49 @@ export default function MVPPage() {
           </div>
         </section>
 
-        {/* Why friends & family */}
+        {/* Who's on the list */}
         <section className="py-16 md:py-24 bg-granny/20">
           <div className="max-w-[1100px] mx-auto px-4">
             <ScrollReveal>
               <div className="text-center mb-14">
+                <span className="inline-block mb-3 text-xs font-bold tracking-widest uppercase text-casablanca-dark">
+                  Before Wave 1
+                </span>
                 <h2 className="font-heading text-3xl md:text-4xl font-extrabold text-firefly mb-4">
-                  Why friends &amp; family first
+                  Who&apos;s on the list
                 </h2>
                 <p className="text-lg text-gray-600 max-w-[640px] mx-auto">
-                  Three reasons we're choosing depth over reach at this stage.
+                  Not everyone in your contacts belongs in Wave 1. Four signals
+                  for picking the first 5 — then 15, then 50.
                 </p>
               </div>
             </ScrollReveal>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-[820px] mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-[900px] mx-auto">
               {[
                 {
-                  title: "Trust buys honesty",
+                  title: "Close enough to be honest",
                   body:
-                    "Strangers say nice things. Friends tell you your onboarding is broken. The people closest to us give the harshest — and most useful — feedback.",
+                    "People who'll tell you the onboarding is broken instead of nodding politely. If they wouldn't say 'this is confusing' to your face, they won't type it in a form.",
                 },
                 {
-                  title: "Low stakes, high speed",
+                  title: "Patient with rough edges",
                   body:
-                    "No press, no expectations, no churn panic. Just a tight loop of build, ship, listen, adjust — the only rhythm an MVP should have.",
+                    "Early builds glitch, copy is half-baked, a screen or two will break. Good Wave 1 users expect that — they're here to help, not to review.",
+                },
+                {
+                  title: "Has a real use case",
+                  body:
+                    "Actually owns things worth offering and actually needs things they'd seek. The loop only tells us something if people run it for real reasons, not out of politeness.",
+                },
+                {
+                  title: "Within matching range",
+                  body:
+                    "Close enough geographically that a Have in one person's list could plausibly match a Want in another's. One Wave 1 user in another city tests sign-up — not the product.",
                 },
               ].map((item, i) => (
                 <ScrollReveal key={item.title} delay={i * 0.1}>
-                  <Card className="text-left">
+                  <Card className="text-left h-full">
                     <h3 className="font-heading text-xl font-bold text-firefly mb-3">
                       {item.title}
                     </h3>
@@ -214,6 +228,19 @@ export default function MVPPage() {
                 </ScrollReveal>
               ))}
             </div>
+
+            <ScrollReveal delay={0.2}>
+              <div className="mt-10 max-w-[900px] mx-auto">
+                <div className="rounded-xl border border-casablanca/40 bg-casablanca/10 px-5 py-4 text-sm text-firefly leading-relaxed">
+                  <span className="font-bold tracking-wide uppercase text-casablanca-dark text-xs mr-2">
+                    Skip for now:
+                  </span>
+                  people who only reply when they have time, anyone outside
+                  matching range, and anyone you&apos;d feel awkward nudging
+                  twice. They&apos;re great for later waves — not Wave 1.
+                </div>
+              </div>
+            </ScrollReveal>
           </div>
         </section>
 
