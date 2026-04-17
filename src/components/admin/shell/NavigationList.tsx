@@ -53,17 +53,14 @@ export function NavigationList({ userEmail }: { userEmail: string }) {
   return (
     <div className="flex flex-col h-full">
       {/* Brand mark */}
-      <div className="px-7 pt-8 pb-10 lg:pt-10 lg:pb-14">
-        <div className="flex items-center gap-3">
-          <TribesLogo className="w-10 h-10 -ml-1 text-offwhite shrink-0" />
-          <div>
-            <div className="text-[9px] uppercase tracking-[0.24em] text-casablanca">
-              Admin
-            </div>
-            <div className="text-[11px] font-light text-offwhite/50 leading-none mt-0.5">
-              Tribes
-            </div>
-          </div>
+      <div className="pl-7 pr-14 pt-8 pb-10 lg:pr-7 lg:pt-10 lg:pb-14">
+        <TribesLogo
+          viewBox="95 223 350 94"
+          preserveAspectRatio="xMinYMid meet"
+          className="block w-full h-auto text-offwhite"
+        />
+        <div className="mt-3 text-[9px] uppercase tracking-[0.24em] text-casablanca">
+          Admin
         </div>
       </div>
 
